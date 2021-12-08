@@ -1,0 +1,28 @@
+networks:
+  - name: eth
+    fullname: Ethereum - Mainnet
+    chain_id: 1
+    currency: ETH
+    block_explorer: https://etherscan.io
+    rpc_node: https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161
+  - name: bsc
+    fullname: Binance Smart Chain - Mainnet
+    chain_id: 56
+    currency: BNB
+    block_explorer: https://bscscan.com
+    rpc_node: https://bsc-dataseed1.defibit.io
+  - name: avax
+    fullname: Avalanche Network - Mainnet
+    chain_id: 43114
+    currency: AVAX
+    block_explorer: https://snowtrace.io
+    rpc_node: https://api.avax.network/ext/bc/C/rpc
+  - name: polygon
+    fullname: Polygon - Mainnet
+    chain_id: 137
+    currency: MATIC
+    block_explorer: https://polygonscan.com
+    rpc_node: https://polygon-rpc.com
+  
+
+
