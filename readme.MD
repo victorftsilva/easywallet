@@ -5,11 +5,13 @@ EasyWallet provides you with programmatic control over your blockchain wallet. Y
 + Install [python 3.6+](https://www.python.org/) in your machine
 + Clone the easywallet repository in your machine running `git clone https://github.com/victorftsilva/easywallet.git`
 + Inside the easywallet project directory install the project dependencies running `pip install -r requirements.txt`
++ Make the easywallet file executable running `chmod +X easywallet` inside easywallet project folder.
 _Done!! you have installed EasyWallet._
 
 
 ## Usage
-inside the project directory run `python easywallet --help` to see the list of available commands.
+inside the project directory run `easywallet --help` to see the list of available commands. 
+_Note:You can add the easywallet project folder to **your system path** to enable calling `easywallet` outside the project directory._
 
 ## Related information
 https://docs.metamask.io/guide/common-terms.html#words-are-hard
