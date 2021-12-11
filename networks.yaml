@@ -23,6 +23,4 @@ networks:
     currency: MATIC
     block_explorer: https://polygonscan.com
     rpc_node: https://polygon-rpc.com
-  
-
-
+    

@@ -1,4 +1,4 @@
-from easywallet.seed import create_account
+from easywallet.account import create_account
 
 def test_account_info_from_mnemonic():
     mnemonic = 'adjust skin maple rotate quiz wedding ill organ target rare hand range afraid flavor hole erupt bullet color crime rookie cat phone advance winter'

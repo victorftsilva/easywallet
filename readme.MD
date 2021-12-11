@@ -3,7 +3,7 @@ EasyWallet provides you with **programmatic control** over your **blockchain wal
 
 ## Install & Usage
 + Install [python 3.6+](https://www.python.org/) in your machine
-+ You need to have [**openssl**](https://www.openssl.org/) installed and available via command line in your system, allowing encryption for private keys of wallets.
++ You need to have [**openssl**](https://www.openssl.org/) installed for encryption.
 + Clone the easywallet repository in your machine running `git clone https://github.com/victorftsilva/easywallet.git`
 + Inside the easywallet project directory install the project dependencies running `pip install -r requirements.txt`
 + Make the easywallet file executable running `chmod +X easywallet` inside easywallet project folder.

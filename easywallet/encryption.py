@@ -3,6 +3,9 @@ from cryptography.fernet import Fernet
 
 fernet_key = None
 
+def env_path():
+    return os.path.expanduser("~") + "/.easywallet"
+
 def get_key() -> Fernet:
     setup_environment()
     return fernet_key
@@ -13,9 +16,7 @@ def setup_environment() -> str:
     inside the folder a public and private RSA keys will be created to encrypt and decrypt the generated keys.
     """
     global fernet_key
-    
-    home = os.path.expanduser("~")
-    path = home + "/.easywallet"
+    path = env_path()
     if not os.path.exists(path):
         os.makedirs(path +'/keys')   
         fernet_key = __create_key(path)

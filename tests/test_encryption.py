@@ -1,4 +1,4 @@
-from easywallet.config import encrypt, decrypt, setup_environment
+from easywallet.encryption import encrypt, decrypt, setup_environment
 
 def test_string_encrypt_decrypt():
     setup_environment()

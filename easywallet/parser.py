@@ -1,4 +1,6 @@
 import argparse
+from easywallet import wallet_parser
+from easywallet.encryption import env_path
 
 NETWORKS = {
     "eth": "Ethereum mainnet",
@@ -7,6 +9,12 @@ NETWORKS = {
     "polygon": "Polygon mainnet",
     "ganache": "Ganache testnet",
 }
+
+def execute(args):
+    if args.create_wallet:
+        wallet_parser.create_wallet(env_path())
+    return args
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Welcome to EasyWallet, your command line blockchain wallet')
@@ -39,5 +47,7 @@ def parse_args():
     #check if args is empty
     if not any(vars(args).values()):
         print("easywallet: try 'easywallet --help' for more information")
-    return args 
-    
+        return None
+    return execute(args) 
+
+

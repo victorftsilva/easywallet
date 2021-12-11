@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 from parser import parse_args
-from config import get_env_path
+from config import setup_environment
 
 if __name__ == '__main__':
-    env_path = get_env_path()
-    args = parse_args()
+    env_path = setup_environment()
+    parse_args()
 
 
 
