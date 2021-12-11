@@ -24,7 +24,7 @@ def test_create_new_wallet():
     assert os.stat(os.path.join(temp, 'wallet.txt')).st_size > 0
 
     # check if the wallet information was saved in the expected format inside the file
-    # format: mnemonic,private_key,public_key,address
+    # format: private_key,public_key,address,mnemonic
     saved_wallet_info = ','.join(new_wallet.values())
     with open(os.path.join(temp, 'wallet.txt'), 'rb') as f:
         file_content = f.read()

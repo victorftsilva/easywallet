@@ -1,7 +1,13 @@
+"""
+The parser module is responsible for parsing the user inputs and executing the commands.
+this module is the default gateway to the other modules and controls all interactions on easywallet.
+"""
 import argparse
-from easywallet import wallet_parser
+from easywallet import wallet
 from easywallet.encryption import env_path
 
+
+"""dictionary listing all available blockchains to connect on easywallet"""
 NETWORKS = {
     "eth": "Ethereum mainnet",
     "bsc": "Binance Smart Chain",
@@ -10,13 +16,18 @@ NETWORKS = {
     "ganache": "Ganache testnet",
 }
 
-def execute(args):
+def execute_cmds(args: argparse.Namespace) -> list:
+    """
+    function responsible for executing all the actions provided from user inputs.
+    returns a ordered list of all describing all the executed commands/actions.    
+    """
     if args.create_wallet:
-        wallet_parser.create_wallet(env_path())
-    return args
+        wallet.create_wallet(env_path())
+    return []
 
 
-def parse_args():
+def parse_args() -> argparse.Namespace:
+    """parse user inputs from the command line  and delegates the execution of corresponding actions"""
     parser = argparse.ArgumentParser(description='Welcome to EasyWallet, your command line blockchain wallet')
 
     #wallet
@@ -48,6 +59,6 @@ def parse_args():
     if not any(vars(args).values()):
         print("easywallet: try 'easywallet --help' for more information")
         return None
-    return execute(args) 
+    return execute_cmds(args) 
 
 
