@@ -13,7 +13,7 @@ cryptography==36.0.0
 cytoolz==0.11.2
 -e git+https://github.com/victorftsilva/easywallet.git@ac9205f0d6a3366ec609ca4b9f7bde5a58d7aede#egg=easywallet
 eth-abi==2.1.1
-eth-account==0.5.6
+eth-account==0.5.9
 eth-hash==0.3.2
 eth-keyfile==0.5.1
 eth-keys==0.3.3
