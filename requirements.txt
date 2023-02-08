@@ -9,7 +9,7 @@ certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.9
 coincurve==16.0.0
-cryptography==36.0.0
+cryptography==39.0.1
 cytoolz==0.11.2
 -e git+https://github.com/victorftsilva/easywallet.git@ac9205f0d6a3366ec609ca4b9f7bde5a58d7aede#egg=easywallet
 eth-abi==2.1.1
